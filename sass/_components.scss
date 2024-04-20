@@ -1,0 +1,16 @@
+.btn {
+  color: $color-grey-light-1;
+  background-color: $color-primary;
+  border: none;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 1.5rem 2.5rem;
+  justify-self: start;
+  align-self: start;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: $color-primary-dark;
+}

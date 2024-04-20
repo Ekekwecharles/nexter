@@ -1,0 +1,68 @@
+.header {
+  grid-column: full-start / col-end 6;
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.9),
+      rgba($color-secondary, 0.9)
+    ),
+    url(../img/hero.jpeg);
+  background-size: cover;
+  background-position: center;
+  padding: 8rem;
+
+  //700px
+  @media only screen and (max-width: 44em) {
+    grid-column: full-start / full-end;
+  }
+
+  //600px
+  @media only screen and (max-width: 37.5em) {
+    padding: 7rem;
+  }
+
+  display: grid;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-template-rows: 1fr min-content minmax(min-content, 6rem) 1fr repeat(
+      2,
+      min-content
+    );
+  justify-content: center;
+  gap: 2rem;
+
+  &__logo {
+    height: 2.8rem;
+    justify-self: center;
+  }
+
+  .seen-text {
+    color: $color-grey-light-2;
+    font-size: 1.6rem;
+
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .seen-text::before,
+  .seen-text::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $color-grey-light-2;
+  }
+
+  .seen-logo-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 3rem;
+
+    img {
+      max-height: 2.5rem;
+      max-width: 100%;
+      filter: brightness(70%);
+    }
+  }
+}

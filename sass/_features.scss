@@ -1,0 +1,36 @@
+.features {
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  column-gap: 6rem;
+  gap: 6rem;
+
+  padding: 12rem 0;
+
+  @media only screen and (max-width: 37.5em) {
+    padding: 9rem 0;
+  }
+
+  .feature {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: repeat(2, min-content);
+    row-gap: 2rem;
+    column-gap: 3rem;
+
+    &__icon {
+      height: 5rem;
+      width: 5rem;
+      fill: $color-primary;
+      grid-row: 1 / -1;
+      transform: translateY(-1.6rem);
+    }
+
+    &__text {
+      font-size: 1.6rem;
+      color: #444;
+      line-height: 1.8;
+      letter-spacing: 0.5px;
+    }
+  }
+}
